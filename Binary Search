@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int binarysearch(int a[],int x,int low,int high)
+{
+    while(low<=high)
+    {
+        int mid=low+(high-low)/2;
+        if(a[mid]==x)
+            return mid;
+        else if(a[mid]<x)
+            low=low+1;
+        else
+            high=mid-1;
+    }
+    return -1;
+}
+int main()
+{
+    int n=0,low,high,x;
+    int a[50];
+    cout<<"enter the number of elements: ";
+    cin>>n;
+    cout<<"enter the elements: ";
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    cout<<"enter the element to be found: ";
+    cin>>x;
+    int result=binarysearch(a,x,0,n-1);
+    if(result==-1)
+      cout<<"not found/n";
+    else
+      cout<<"found at index: "<<result;
+    return 0;
+}
