@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,p,in;
+    cout<<"enter the number of elements: ";
+    cin>>n;
+    int a[n];
+    cout<<"enter the elements: ";
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    cout<<"enter the element to chose: ";
+    cin>>p;
+    for(int j=0;j<n;j++)
+    {
+        if(a[j]==p)
+        {
+            in=j;
+        }
+    }
+    cout<<"found at index number: "<<in;
+    return 0;
+}
