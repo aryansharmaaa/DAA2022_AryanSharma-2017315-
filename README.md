@@ -1,2 +1,0 @@
-# DAA2022_AryanSharma-2017315-
-DAA PROJECTS
